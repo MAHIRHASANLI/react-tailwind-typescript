@@ -1,6 +1,6 @@
 import useMediaQuery from "../../hooks";
 import { SelectedPage } from "../../shared/types";
-import ActionButton from "../../shared/ActionButton";
+import ActionButton from "../../shared/Button";
 import { motion } from "framer-motion";
 import HomePageText from "../../assets/HomePageText.png";
 import HomePageGraphic from "../../assets/HomePageGraphic.png";
@@ -22,14 +22,13 @@ const Home = ({ setSelectedPage }: Props) => {
         className="mx-auto w-5/6 flex items-center justify-center flex-col md:flex-row md:h-5/6"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
-
         <div className="z-10 mt-32 basis-3/5">
           {/* top-item */}
           <div
             className="md:-mt-20"
             data-aos="fade-right"
-            data-aos-delay="600"
-            data-aos-duration="600"
+            data-aos-delay="700"
+            data-aos-duration="1000"
           >
             <div className="relative">
               <div className="after:absolute after:-top-20 after:-left-20 after:z-[-1] md:after:content-evolvetext">
@@ -48,7 +47,7 @@ const Home = ({ setSelectedPage }: Props) => {
             className="mt-8 flex items-center gap-8"
             data-aos="fade-right"
             data-aos-delay="700"
-            data-aos-duration="700"
+            data-aos-duration="1000"
           >
             <ActionButton setSelectedPage={setSelectedPage}>
               Join Now
@@ -67,7 +66,7 @@ const Home = ({ setSelectedPage }: Props) => {
           className="flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end"
           data-aos="fade-left"
           data-aos-delay="650"
-          data-aos-duration="650"
+          data-aos-duration="950"
         >
           <img className="w-[100%]" alt="home" src={HomePageGraphic} />
         </div>

@@ -1,32 +1,37 @@
-// import React from 'react'
-// import Link from '../link';
+import Link from "../link";
+import ActionButton from "../../../shared/Button";
+import { SelectedPage } from "@/shared/types";
 
-// type Props = {
-//     selectedPage: string;
-//     setSelectedPage: (value: string) => void; 
-//     }
-// const arrayNavbar : string[] = ['Home', 'Benefits', 'Our Classes', 'Contact Us'];
+type Props = {
+  selectedPage: SelectedPage;
+  setSelectedPage: (value: SelectedPage) => void;
+  arrayNavbar: string[];
+};
 
-// const Nav = ({selectedPage, setSelectedPage}: Props) => {
-//   const flexBetween = "flex justify-between items-center";
+const Nav = ({ selectedPage, setSelectedPage, arrayNavbar }: Props) => {
+  const flexBetween = "flex justify-between items-center";
 
-//   return (
-//     <nav className={`${flexBetween} w-full`}>
-//         <ul className={`${flexBetween} gap-8 text-sm`}>
-//             {
-//                 arrayNavbar.map((item, i)=>(
-//                     <Link key={i} page={item} selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
-//                 ))
-//             }
+  return (
+    <nav className={`${flexBetween} w-full`}>
+      <div className={`${flexBetween} gap-8 text-sm`}>
+        {arrayNavbar.map((item, i) => (
+          <Link
+            key={i}
+            page={item}
+            selectedPage={selectedPage}
+            setSelectedPage={setSelectedPage}
+          />
+        ))}
+      </div>
 
-//         </ul>
+      <div className={`${flexBetween} gap-8`}>
+        <p>Sign In</p>
+        <ActionButton setSelectedPage={setSelectedPage}>
+          Become a Member
+        </ActionButton>
+      </div>
+    </nav>
+  );
+};
 
-//         <div className={`${flexBetween} gap-8`}>
-//             <p>Sign In</p>
-//             <button>Become a Member</button>
-//         </div>
-//     </nav>
-//   )
-// }
-
-// export default Nav
+export default Nav;

@@ -1,12 +1,10 @@
-// import { AcademicCapIcon, Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid'
 import { SelectedPage } from "@/shared/types";
 import logo from "../../../assets/Logo.png";
-// import Nav from '../nav';
 import Link from "../link";
 import useMediaQuery from "../../../hooks";
-import ActionButton from "../../../shared/ActionButton.tsx";
 import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/20/solid";
 import { useState } from "react";
+import Nav from "../nav/index.tsx";
 
 const arrayNavbar: string[] = ["Home", "Benefits", "Our Classes", "Contact Us"];
 
@@ -32,25 +30,11 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
             {/* Nav */}
             {isAboveMediumScreens ? (
-              <nav className={`${flexBetween} w-full`}>
-                <div className={`${flexBetween} gap-8 text-sm`}>
-                  {arrayNavbar.map((item, i) => (
-                    <Link
-                      key={i}
-                      page={item}
-                      selectedPage={selectedPage}
-                      setSelectedPage={setSelectedPage}
-                    />
-                  ))}
-                </div>
-
-                <div className={`${flexBetween} gap-8`}>
-                  <p>Sign In</p>
-                  <ActionButton setSelectedPage={setSelectedPage}>
-                    Become a Member
-                  </ActionButton>
-                </div>
-              </nav>
+              <Nav
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+                arrayNavbar={arrayNavbar}
+              />
             ) : (
               <button
                 className="rounded-full bg-secondary-500 p-2"

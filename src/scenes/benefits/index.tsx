@@ -1,5 +1,4 @@
 import { BenefitType, SelectedPage } from "../../shared/types";
-
 import { motion } from "framer-motion";
 import HText from "../../shared/h1text";
 import Ptext from "../../shared/ptext";
@@ -85,7 +84,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
         </motion.div>
 
         {/* Bottom-Section */}
-        <BottomSection />
+        <BottomSection setSelectedPage={setSelectedPage}/>
       </motion.div>
     </section>
   );
