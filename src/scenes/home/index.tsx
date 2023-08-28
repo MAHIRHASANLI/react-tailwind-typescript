@@ -4,10 +4,10 @@ import ActionButton from "../../shared/Button";
 import { motion } from "framer-motion";
 import HomePageText from "../../assets/HomePageText.png";
 import HomePageGraphic from "../../assets/HomePageGraphic.png";
-import SponsorRedbull from "../../assets/SponsorRedbull.png";
 import SponsorForbes from "../../assets/SponsorForbes.png";
 import SponsorFortune from "../../assets/SponsorFortune.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import SponsorRedbull from "../../assets/SponsorRed.png"
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;

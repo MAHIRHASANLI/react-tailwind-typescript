@@ -9,10 +9,10 @@ const Form = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async (event: any) => {
+  const onSubmit = async (e: any) => {
     const isValid = await trigger();
     if (!isValid) {
-      event.preventDefault();
+      e.preventDefault();
     }
   };
   return (
