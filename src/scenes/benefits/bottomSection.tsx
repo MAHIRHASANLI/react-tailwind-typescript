@@ -13,12 +13,9 @@ const BottomSection = ({ setSelectedPage }: Props) => {
       <img
         alt="graphig-photo"
         src={BenetitsPageGraphic}
-        data-aos="fade-right"
-        data-aos-delay="600"
-        data-aos-duration="1000"
       />
 
-      <div data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000">
+      <div>
         {/* Title */}
         <div className="relative">
           <div className="before:absolute before:-ml-20 before:-mt-20 before:content-abstractwaves">
